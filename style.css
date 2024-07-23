@@ -1,0 +1,315 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+*::selection {
+  color: #ffffff;
+  background: var(--secondary);
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #e9e9e9;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", "Noto Sans TC";
+  letter-spacing: 0.04rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CSS 開始 */
+:root {
+  --primary: #3c67ff; /* 設定主色變數 */
+  --secondary: #87a1ff;
+  --black: rgb(33, 33, 33);
+  --gray: rgb(33, 33, 33, 0.6);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+.text-black {
+  color: var(--black);
+}
+.text-gray {
+  color: var(--gray);
+}
+.inline {
+  display: inline;
+}
+.no-wrap {
+  text-wrap: nowrap;
+}
+.text-sm {
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+.paragraph {
+  line-height: 1.6rem;
+}
+
+.resume-container {
+  background: #ffffff;
+  width: 210mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  margin: 24px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-photo {
+  border-radius: 4px;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  padding: 2px 0;
+}
+
+.summary-and-skills {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.summary {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills {
+  width: 40%;
+}
+
+.title-border {
+  width: 100%;
+  border-top: 2px solid rgb(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-radius: 50px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.experience-wrapper:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.time-container {
+  width: 25%;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+ul.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+ul.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  margin-top: 8px;
+  width: 10px;
+  height: 10px;
+  background: url("./Icons/icon-dot.svg") no-repeat center center;
+  background-size: cover;
+}
+
+ul.horizontal-list li {
+  display: inline;
+}
+
+ul.horizontal-list li:not(:last-child) {
+  margin-right: 24px;
+}
+
+.title-sm {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.school {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+#link-video::after,
+#link-github::after {
+  content: "click me";
+  font-size: 0.8rem;
+  margin-left: 4px;
+  padding: 2px 4px;
+  color: #ffffff;
+  background-color: var(--secondary);
+}
+
+#link-video:hover::after,
+#link-github:hover::after {
+  background-color: var(--primary);
+  transition: 0.2s ease-in-out;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* rwd */
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+  .resume-container {
+    max-width: 700px;
+    margin: 24px;
+  }
+}
+
+/* sm */
+@media (max-width: 767px) {
+  .resume-container {
+    max-width: 540px;
+    margin: 20px;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .profile-photo-container {
+    display: none;
+  }
+
+  .summary-and-skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .summary {
+    width: 100%;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  ul.horizontal-list li {
+    display: block;
+  }
+
+  ul.horizontal-list li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .experience-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experience {
+    width: 100%;
+  }
+
+  .time-container {
+    width: 100%;
+  }
+}
