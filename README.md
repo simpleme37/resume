@@ -1,6 +1,6 @@
 # Auth Demo
 
-一張RWD簡歷。
+一張RWD簡歷
 
 ## Technologies
 
