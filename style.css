@@ -239,7 +239,8 @@ ul.horizontal-list li:not(:last-child) {
 }
 
 #link-video::after,
-#link-github::after {
+#link-github::after,
+#link-portfolio::after {
   content: "前往查看";
   font-size: 0.8rem;
   margin-left: 4px;
@@ -249,7 +250,8 @@ ul.horizontal-list li:not(:last-child) {
 }
 
 #link-video:hover::after,
-#link-github:hover::after {
+#link-github:hover::after,
+#link-portfolio:hover::after {
   background-color: var(--primary);
   transition: 0.2s ease-in-out;
 }
